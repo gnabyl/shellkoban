@@ -2,13 +2,13 @@
 
 ## Description fonctionalite et apparence
 
-Le joueur sera représenté par un caractère 웃 (unicode U+c6c3 HANGUL SYLLABLE US)
+Le joueur sera représenté par un caractère ♟ 
 
-Les caisses sont représentées par le caractère #254 (ascii)
+Les caisses sont représentées par le caractère @
 
 Les case cibles sont représentées par des caractères ★ (U+2605)
 
-Le bord est représenté par des traits comme - et |
+Le bord est représenté par #
 
 Il y aura un système de compétition (scoreboard, bestscore...) avec les jouers précédents.
 
