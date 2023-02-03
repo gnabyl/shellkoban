@@ -1,5 +1,5 @@
 #!/bin/bash
 
 affichage_nombre_etape() {
-	echo "Nombre d'étape:  $score "
+	echo "Nombre d'étape:  $score"
 }

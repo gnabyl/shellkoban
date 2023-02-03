@@ -1,6 +1,7 @@
 source "./levels.sh"
 source "./affichage.sh"
 source "./clavier.sh"
+source "./affichage_nombre_etape.sh"
 
 
 n_rows=0
@@ -9,6 +10,7 @@ gc=0
 gr=0
 
 let "current_level=1"
+score=0
 let "max_level=1"
 
 while [ $current_level -le $max_level ]
@@ -29,6 +31,7 @@ do
 		# Calculate new position
 		# Display map
 		affichage
+		affichage_nombre_etape
 		echo $gr
 		echo $gc
 		# Wait for user input
