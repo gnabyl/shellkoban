@@ -2,7 +2,7 @@
 
 # This the main code file
 
-# fonction de Rédemarrer level
+# fonction pour Rédemarrer level
 # Taper <R> pour Rédemarrer level
 current_level=0
 redemarrer_level() {
