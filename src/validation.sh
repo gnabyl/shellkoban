@@ -35,9 +35,3 @@ validation()
 		vb=0
 	fi
 }
-
-validation 2 1 2 0
-
-echo $va
-echo $vb
-
