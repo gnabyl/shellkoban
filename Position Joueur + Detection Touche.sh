@@ -1,6 +1,5 @@
 #!/bin/bash
-while true
-do
+ecoute_touche () {
     read -rsn 1 t
     case $t in
         A) validation $((gr-1)) $gc $((gr-2)) $gc; 
@@ -24,4 +23,4 @@ do
                 gr=$((gc-1))
             fi;;
     esac
-done
+}
