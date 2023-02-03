@@ -2,11 +2,11 @@
 
 ## Description fonctionalite et apparence
 
-Le joueur sera représenté par un caractère ♟ 
+Le joueur sera représenté par un caractère P
 
 Les caisses sont représentées par le caractère @
 
-Les case cibles sont représentées par des caractères ★ (U+2605)
+Les case cibles sont représentées par des caractères *
 
 Le bord est représenté par #
 
