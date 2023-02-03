@@ -4,7 +4,7 @@
 # fichier scoreboard.txt
 # fonction 1: écrire scoreboard dans fichier scoreboard.txt
 #   il faut écrire nom_joueur:score
-
+# fonction 2:  lire score de fichier scoreboard.txt
 #current_level=1
 #nom_joueur="shao"
 #score=10
@@ -13,5 +13,13 @@ write_score() {
 	# Ensuite on prend le nom_joueur
 	# Puis on prend  le score du joueur
 	# Enfin on écrit nom_joueur:score
-	echo "$nom_joueur:$score">> ../score/level$current_level/scoreboard.txt
+	echo "$2:$3">> ../score/level$1/scoreboard.txt
+	echo "Écrire le score avec success!"
 }
+#write_score $current_level $nom_joueur $score
+
+affichage_score() {
+	paste  -s ../score/level1/scoreboard.txt ../score/level2/scoreboard.txt ../score/level3/scoreboard.txt ../score/level4/scoreboard.txt ../score/level5/scoreboard.txt
+}
+
+affichage_score
