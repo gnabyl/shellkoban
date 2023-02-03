@@ -1,10 +1,15 @@
 #!/bin/bash
 affichage () {
-	for ((i=1; i<$(($n_rows+1)); i++));
+	for ((i=0; i<$(($n_rows)); i++));
 	do
-        	for ((j=1; j<$(($n_cols+1)); j++));
+        	for ((j=0; j<$(($n_cols)); j++));
 		do
-			cat "../current_level/map/${i}_${j}" < printf
+			if test -f "../current_level/objects/${i}_${j}"; 
+			then
+    			echo -n $(../current_level/objects/${i}_${j})
+			else 
+				echo -n $(../current_level/map/${i}_${j})
+			fi
 		done
 		printf "\n"
 	done
