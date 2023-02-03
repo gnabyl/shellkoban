@@ -13,7 +13,7 @@ write_score() {
 	# Ensuite on prend le nom_joueur
 	# Puis on prend  le score du joueur
 	# Enfin on écrit nom_joueur:score
-	echo "$2:$3">> ../score/level$1/scoreboard.txt
+	echo "$2:$3" >> ../score/level$1/scoreboard.txt
 	echo "Écrire le score avec success!"
 }
 #write_score $current_level $nom_joueur $score
@@ -34,5 +34,3 @@ affichage_score() {
         #sort -t: -k2 ../score/level5/scoreboard.txt | head -n 3 | paste -d " " -s 
         echo "***************************************************************************"
 }
-
-affichage_score
