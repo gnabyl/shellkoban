@@ -1,4 +1,5 @@
 #!/bin/bash
+#prend en parametre la position apres ou le joueur va atterir
 modifBox () {
 	if [ "$vb" == "1" ]
 	then
