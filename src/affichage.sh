@@ -4,7 +4,7 @@ affichage () {
 	do
         	for ((j=1; j<$(($n_cols+1)); j++));
 		do
-			cat "../current_level/map/${i}_${j}" < printf
+			echo -n $(../current_level/map/${i}_${j})
 		done
 		printf "\n"
 	done
