@@ -1,4 +1,5 @@
 source "./levels.sh"
+source "./affichage.sh"
 
 n_rows=0
 n_cols=0
@@ -24,5 +25,6 @@ do
 		# Check validity
 		# Calculate new position
 		# Display map
+		affichage
 	done
 done
