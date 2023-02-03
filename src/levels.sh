@@ -28,4 +28,3 @@ load_level() {
 	done < $src_file
 }
 
-load_level 1
