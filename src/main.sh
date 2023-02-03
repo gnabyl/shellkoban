@@ -1,5 +1,8 @@
 source "./levels.sh"
 
+n_rows=0
+n_cols=0
+
 let "current_level=1"
 let "max_level=1"
 
@@ -14,7 +17,9 @@ do
 	# Main game loop
 	while [ $win = false ]
 	do
-		echo "Run"
+		# Clear screen to redraw
+		clear
+		echo "Level $current_level: size = $n_rows x $n_cols"
 		# Wait for user input
 		# Check validity
 		# Calculate new position
