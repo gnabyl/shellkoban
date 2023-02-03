@@ -22,14 +22,14 @@ load_level() {
 	while read line; do
 		let "col=0"
 
-		while read c; do
+		while read cell; do
 			# Create map file
 			echo $cell > "$dest_map_folder/${row}_${col}"
 			# Create objects file
-			# if [ $cell != "#" ] || [! $cell == " " ]
-			# then
-			# 	echo $cell > "$dest_objects_folder/${n_rows}_${col}"
-			# fi
+			if [ $cell != "#" ] || [ $cell != " " ]
+			then
+				echo $cell > "$dest_objects_folder/${n_rows}_${col}"
+			fi
 
 
 			let "col=col+1"
