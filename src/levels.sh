@@ -20,11 +20,18 @@ load_level() {
 
 		while read cell; do
 			# Create map files
-			echo -n $cell > "$dest_map_folder/${row}_${col}"
+			echo -n "$cell" > "$dest_map_folder/${row}_${col}"
 			# Create objects files
 			if [ "$cell" != "#" ] && [ "$cell" != " " ] && [ "$cell" != "*" ]
 			then
-				echo -n $cell > "$dest_objects_folder/${row}_${col}"
+				echo -n "$cell" > "$dest_objects_folder/${row}_${col}"
+				echo -n " " > "$dest_map_folder/${row}_${col}"
+			fi
+			# Set player position
+			if [ "$cell" == "P" ]
+			then
+				gr=$row
+				gc=$col
 			fi
 
 			let "col=col+1"
@@ -33,14 +40,16 @@ load_level() {
 
 		let "row=row+1"
 
-		if [ $col -gt $n_cols ]
+		if [[ $col -gt $n_cols ]]
 		then
 			n_cols=$col
 		fi
-		if [ $row -gt $n_rows ]
+		
+		if [[ $row -gt $n_rows ]]
 		then
 			n_rows=$row
 		fi
-
 	done < $src_file
 }
+
+load_level 1

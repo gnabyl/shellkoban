@@ -1,4 +1,12 @@
 source "./levels.sh"
+source "./affichage.sh"
+source "./clavier.sh"
+
+
+n_rows=0
+n_cols=0
+gc=0
+gr=0
 
 let "current_level=1"
 let "max_level=1"
@@ -14,10 +22,16 @@ do
 	# Main game loop
 	while [ $win = false ]
 	do
-		echo "Run"
-		# Wait for user input
+		# Clear screen to redraw
+		clear
+		echo "Level $current_level: size = $n_rows x $n_cols"
 		# Check validity
 		# Calculate new position
 		# Display map
+		affichage
+		echo $gr
+		echo $gc
+		# Wait for user input
+		ecoute_touche
 	done
 done
