@@ -1,8 +1,4 @@
 # $1: index of level
-
-n_rows=0
-n_cols=0
-
 load_level() {
 	local src_file="../levels/level-$1"
 	local dest_map_folder="../current_level/map"
@@ -23,7 +19,6 @@ load_level() {
 		let "col=0"
 
 		while read cell; do
-			echo $row $col "|$cell|"
 			# Create map files
 			echo -n $cell > "$dest_map_folder/${row}_${col}"
 			# Create objects files
@@ -49,8 +44,3 @@ load_level() {
 
 	done < $src_file
 }
-
-load_level 1
-
-echo $n_rows
-echo $n_cols
