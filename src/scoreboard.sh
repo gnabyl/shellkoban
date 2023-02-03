@@ -32,7 +32,7 @@ affichage_score() {
         paste -d " "  -s ../score/level4/scoreboard.txt
         echo -n "|| level5 ||  "
         paste -d " "  -s ../score/level5/scoreboard.txt
-
+        echo "***************************************************************************"
 	#paste  -s ../score/level1/scoreboard.txt ../score/level2/scoreboard.txt ../score/level3/scoreboard.txt ../score/level4/scoreboard.txt ../score/level5/scoreboard.txt
 	
 }
