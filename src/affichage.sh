@@ -1,11 +1,11 @@
 #!/bin/bash
-n_rows=5
-n_cols=5
-for ((i=1; i<$(($n_rows+1)); i++));
+affichage () {
+	for ((i=1; i<$(($n_rows+1)); i++));
 	do
-        for ((j=1; j<$(($n_cols+1)); j++));
-	do
-		echo $i $j
+        	for ((j=1; j<$(($n_cols+1)); j++));
+		do
+			cat "../current_level/map/${i}_${j}" < printf
+		done
+		printf "\n"
 	done
-done
-
+}
