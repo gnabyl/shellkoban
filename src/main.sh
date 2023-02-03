@@ -40,6 +40,7 @@ while [ $current_level -le $max_level ]
 do
 	# Load the current level
 	load_level $current_level
+	score=0
 
 	# The user didn't win
 
@@ -49,10 +50,16 @@ do
 		# Clear screen to redraw
 		clear
 		echo "Level $current_level: size = $n_rows x $n_cols"
+		echo "Press 's' to show the scoreboard"
+		echo "Press 'r' to restart"
+		echo
+		echo
 		# Check validity
 		# Calculate new position
 		# Display map
 		affichage
+		echo
+		echo
 		affichage_nombre_etape
 		check_win
 		if [ "$nb_good" == "$nb_stars" ]

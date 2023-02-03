@@ -19,18 +19,20 @@ write_score() {
 #write_score $current_level $nom_joueur $score
 
 affichage_score() {
+	clear
 	echo "***************************************************************************"
 	echo "*                               SCOREBOARD                                *"
-        echo "***************************************************************************"
+	echo "***************************************************************************"
 	echo -n "|| level1 ||  "
 	sort -t: -k2 ../score/level1/scoreboard.txt | head -n 5 | paste -d " " -s
 	echo -n "|| level2 ||  "
-        sort -t: -k2 ../score/level2/scoreboard.txt | head -n 5 | paste -d " " -s 
-        echo -n "|| level3 ||  "
-        sort -t: -k2 ../score/level3/scoreboard.txt | head -n 5 | paste -d " " -s 
-        #echo -n "|| level4 ||  "
-        #sort -t: -k2 ../score/level4/scoreboard.txt | head -n 3 | paste -d " " -s 
-        #echo -n "|| level5 ||  "
-        #sort -t: -k2 ../score/level5/scoreboard.txt | head -n 3 | paste -d " " -s 
-        echo "***************************************************************************"
+	sort -t: -k2 ../score/level2/scoreboard.txt | head -n 5 | paste -d " " -s 
+	echo -n "|| level3 ||  "
+	sort -t: -k2 ../score/level3/scoreboard.txt | head -n 5 | paste -d " " -s 
+	#echo -n "|| level4 ||  "
+	#sort -t: -k2 ../score/level4/scoreboard.txt | head -n 3 | paste -d " " -s 
+	#echo -n "|| level5 ||  "
+	#sort -t: -k2 ../score/level5/scoreboard.txt | head -n 3 | paste -d " " -s 
+	echo "***************************************************************************"
+	read -p "Entrez pour revenir"
 }

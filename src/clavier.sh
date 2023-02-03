@@ -39,6 +39,7 @@ ecoute_touche () {
 							score=$((score+1))
             fi;;
 				'r') redemarrer_level;;
+				's') affichage_score;;
     esac
 
 }
