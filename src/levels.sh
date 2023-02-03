@@ -19,34 +19,38 @@ load_level() {
 	# Read source file line by line
 	IFS="" # keep whitespaces
 	let "row=0"
-	while read line; do
+	while read -r line; do
 		let "col=0"
 
 		while read cell; do
-			# Create map file
-			echo $cell > "$dest_map_folder/${row}_${col}"
-			# Create objects file
-			if [ $cell != "#" ] || [ $cell != " " ]
+			echo $row $col "|$cell|"
+			# Create map files
+			echo -n $cell > "$dest_map_folder/${row}_${col}"
+			# Create objects files
+			if [ "$cell" != "#" ] && [ "$cell" != " " ] && [ "$cell" != "*" ]
 			then
-				echo $cell > "$dest_objects_folder/${n_rows}_${col}"
+				echo -n $cell > "$dest_objects_folder/${row}_${col}"
 			fi
-
 
 			let "col=col+1"
 
-			if [ $col -gt $n_cols ]
-			then
-				n_cols=$col
-			fi
-			if [ $row -gt $n_rows ]
-			then
-				n_rows=$row
-			fi
 		done < <(echo $line | fold -w 1)
 
 		let "row=row+1"
+
+		if [ $col -gt $n_cols ]
+		then
+			n_cols=$col
+		fi
+		if [ $row -gt $n_rows ]
+		then
+			n_rows=$row
+		fi
 
 	done < $src_file
 }
 
 load_level 1
+
+echo $n_rows
+echo $n_cols
