@@ -19,7 +19,22 @@ write_score() {
 #write_score $current_level $nom_joueur $score
 
 affichage_score() {
-	paste  -s ../score/level1/scoreboard.txt ../score/level2/scoreboard.txt ../score/level3/scoreboard.txt ../score/level4/scoreboard.txt ../score/level5/scoreboard.txt
+	echo "***************************************************************************"
+	echo "*                               SCOREBOARD                                *"
+        echo "***************************************************************************"
+	echo -n "|| level1 ||  "
+	paste -d " "  -s ../score/level1/scoreboard.txt
+	echo -n "|| level2 ||  "
+        paste -d " "  -s ../score/level2/scoreboard.txt
+        echo -n "|| level3 ||  "
+        paste -d " "  -s ../score/level3/scoreboard.txt
+        echo -n "|| level4 ||  "
+        paste -d " "  -s ../score/level4/scoreboard.txt
+        echo -n "|| level5 ||  "
+        paste -d " "  -s ../score/level5/scoreboard.txt
+
+	#paste  -s ../score/level1/scoreboard.txt ../score/level2/scoreboard.txt ../score/level3/scoreboard.txt ../score/level4/scoreboard.txt ../score/level5/scoreboard.txt
+	
 }
 
 affichage_score
