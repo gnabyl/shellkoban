@@ -1,8 +1,8 @@
 # $1: index of level
 load_level() {
 	local src_file="../levels/level-$1"
-	local dest_map_folder="../current_lelvel/map"
-	local dest_objects_folder="../current_lelvel/objects"
+	local dest_map_folder="../current_level/map"
+	local dest_objects_folder="../current_level/objects"
 
 	rm -rf $dest_map_folder
 	rm -rf $dest_objects_folder
@@ -22,6 +22,7 @@ load_level() {
 
 		echo $line | fold -w 1 | while read c; do
 			let "col=col+1"
+			# Create map file
 			echo $cell > "$dest_map_folder/${n_rows}_${col}"
 		done
 	done < $src_file
