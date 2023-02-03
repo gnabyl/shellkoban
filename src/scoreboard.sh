@@ -9,5 +9,6 @@ current_level
 write_score() {
 	# D'abord on prend le curret_level
 	# Ensuite on prend le nom_joueur
-	# Puis on prend 
+	# Puis on prend  le score du joueur
+	# Enfin on écrit nom_joueur:
 }
