@@ -51,5 +51,3 @@ load_level() {
 		fi
 	done < $src_file
 }
-
-load_level 1

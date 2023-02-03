@@ -31,7 +31,7 @@ gr=0
 nb_stars=0
 nb_good=0
 
-let "current_level=1"
+let "current_level=3"
 score=0
 let "max_level=3"
 
@@ -40,10 +40,12 @@ while [ $current_level -le $max_level ]
 do
 	# Load the current level
 	load_level $current_level
+	echo "aaa"
 	score=0
 
 	# The user didn't win
 
+	abc=0
 	# Main game loop
 	while [ true ]
 	do
@@ -54,8 +56,6 @@ do
 		echo "Press 'r' to restart"
 		echo
 		echo
-		# Check validity
-		# Calculate new position
 		# Display map
 		affichage
 		echo
@@ -71,6 +71,8 @@ do
 			break
 		fi
 		# Wait for user input
+		# Check validity
+		# Calculate new position
 		ecoute_touche
 	done
 done
