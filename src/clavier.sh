@@ -1,3 +1,5 @@
+source "./validation.sh"
+
 ecoute_touche () {
     read -rsn 1 t
     case $t in

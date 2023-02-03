@@ -26,6 +26,12 @@ load_level() {
 			then
 				echo -n "$cell" > "$dest_objects_folder/${row}_${col}"
 			fi
+			# Set player position
+			if [ "$cell" == "P" ]
+			then
+				gr=$row
+				gc=$col
+			fi
 
 			let "col=col+1"
 
