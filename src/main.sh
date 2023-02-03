@@ -40,7 +40,6 @@ while [ $current_level -le $max_level ]
 do
 	# Load the current level
 	load_level $current_level
-	score=0
 
 	# The user didn't win
 

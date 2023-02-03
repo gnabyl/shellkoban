@@ -1,6 +1,7 @@
 source "./validation.sh"
 source "./modif_gamer.sh"
 source "./pos_box_update.sh"
+source "./redemarrer_level.sh"
 
 ecoute_touche () {
     read -rsn 1 t
@@ -37,6 +38,7 @@ ecoute_touche () {
 							gc=$((gc-1))
 							score=$((score+1))
             fi;;
+				'r') redemarrer_level;;
     esac
 
 }

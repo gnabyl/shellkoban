@@ -13,8 +13,8 @@ write_score() {
 	# Ensuite on prend le nom_joueur
 	# Puis on prend  le score du joueur
 	# Enfin on écrit nom_joueur:score
+	mkdir -p "../score/level$1/"
 	echo "$2:$3" >> ../score/level$1/scoreboard.txt
-	echo "Écrire le score avec success!"
 }
 #write_score $current_level $nom_joueur $score
 
