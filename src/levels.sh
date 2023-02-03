@@ -25,6 +25,7 @@ load_level() {
 			if [ "$cell" != "#" ] && [ "$cell" != " " ] && [ "$cell" != "*" ]
 			then
 				echo -n "$cell" > "$dest_objects_folder/${row}_${col}"
+				echo -n " " > "$dest_map_folder/${row}_${col}"
 			fi
 			# Set player position
 			if [ "$cell" == "P" ]
