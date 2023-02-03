@@ -1,4 +1,0 @@
-shao:10
-du:20
-shao:10
-shao:10
