@@ -4,12 +4,8 @@
 
 # fonction de Rédemarrer level
 # Taper <R> pour Rédemarrer level
-M = 10
-N = 10
-redemarrerLevel() {
-	for  ((ligne=0; ligne<$M; ligne++))
-	do
-		for ((colonne=0; colonne<$N; colonne++))
-		do
-			
+current_level=0
+redemarrer_level() {
+	read -r -p "Quel niveau vous voulez rédemarrer? (saisir un nombre de 1 à 5): " current_level
+	load_level(current_level)
 }
