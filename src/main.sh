@@ -31,7 +31,7 @@ gr=0
 nb_stars=0
 nb_good=0
 
-let "current_level=3"
+let "current_level=1"
 score=0
 let "max_level=3"
 
@@ -40,7 +40,6 @@ while [ $current_level -le $max_level ]
 do
 	# Load the current level
 	load_level $current_level
-	echo "aaa"
 	score=0
 
 	# The user didn't win

@@ -12,6 +12,8 @@ load_level() {
 	mkdir -p $dest_objects_folder
 
 
+	n_cols=0
+	n_rows=0
 	# Read source file line by line
 	IFS="" # keep whitespaces
 	let "row=0"
